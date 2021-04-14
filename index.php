@@ -6,7 +6,7 @@ $us="vxjxguhqyfsiqn";
 $ps="e088a9a86be067fc05ddd327c96ddb861b566f6c8810c1930269fac782399b61";
 $conn = "host={$host},port = {$port},dbname={$dbname},username={$us},password={$ps}";
 $dbconn = pg_connect($conn);
-if (!$dbconn){
-    echo "loi";
+if ($dbconn){
+    echo "thanh cong";
 }
 ?>
