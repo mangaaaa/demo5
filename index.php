@@ -8,5 +8,7 @@ $conn = "host={$host},port = {$port},dbname={$dbname},username={$us},password={$
 $dbconn = pg_connect($conn);
 if ($dbconn){
     echo "thanh cong";
+}else{
+echo"loi ket noi";
 }
 ?>
