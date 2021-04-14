@@ -8,7 +8,16 @@ $conn = "host={$host},port = {$port},dbname={$dbname},username={$us},password={$
 $dbconn = pg_connect($conn);
 if ($dbconn){
     echo "thanh cong";
-}else{
-echo"loi ket noi";
 }
+$select = "SELECT us FROM account";
+$query = pg_query($dbconn,$select);
+if (pg_num_rows($rs)>0) 
+    {
+      while ($row=pg_fetch_assoc($rs)) 
+      {
+    ?>
+        <h1><?php echo $r['us']?></h1>
+    <?php
+    }
+    }
 ?>
